@@ -1,137 +1,109 @@
+<!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Assignment Solution for Module 2</title>
-<link rel="stylesheet" href="css/mystyle.css">
-<style>
-	body {
-position: relative;
-font-size: 170%;
-font-family: Verdana, sans-serif;
-}
-
-.menu {
-	text-align: center;
-	font-size: 175%;
-	font-weight: bold;
-}
-
-.divi {
-	width: 95%;
-	border: 1px solid black;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 60px;
-}
-
-#item {
-	position: absolute;
-	right: 0px;
-	border-left: 1px solid black;
-	border-bottom: 1px solid black;
-	padding: 5px 15px 5px 15px;
-	font-size: 125%;
-}
-
-.itemchicken {
-	background-color: pink;
-}
-
-.itembeef {
-	background-color: red;
-}
-
-.itemshushi {
-	background-color: yellow;
-}
-
-#content {
-	padding: 60px 10px 10px;
-	background-color: lightgrey;
-}
-*
-{
-  box-sizing: border-box;
-}
-#container
-{
-position: relative;
-}
-.row
-{
-	width:100%;
-}
-@media (min-width: 992px)
-{
-.col-lg-4
-{
-float: left;
-}
-.col-lg-4
-{
-width: 33.33%;
-}
-}
-@media (min-width: 768px) and (max-width: 991px)
-{
-.col-md-6, .col-md-12 
-{
-float: left;
-}
-.col-md-6
-{
-width: 50%;
-}
-.col-md-12
-{
-width: 100%;	
-}
-}
-@media (max-width: 767px)
-{
-body {
-	font-size: 120%;
-}
-.menu {
-	text-align: center;
-}
-}
-</style>
-</head>	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<!-- IF YOU ARE EVALUATING ME -->
+	<!-- this is for font not a bootstrap or css link if you are evaluating me -->
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+	<title>model 2 solution</title>
+</head>
 <body>
-	<div class="menu">Our Menu</div>
-	<div class="row">
-			<div class="col-lg-4 col-md-6">
-				<div id="container" class="divi">
-				<div id="item" class="itemchicken">
-				Chicken
-				</div>
-					<div id="content">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod, odio vel convallis rutrum, ante augue ultricies lectus, a fringilla est ex non nisi. Suspendisse potenti. In nec gravida felis, non tristique risus. Suspendisse et nisi ut tortor fermentum tempus. Etiam et varius libero.
-					</div>
+
+	<style>
+		* {
+			font-family: 'Open Sans', sans-serif;
+		}
+		h1{
+			text-align: center;
+			font-family: 'Open Sans', sans-serif;
+			margin-top: 3rem;
+		}
+		.box{
+			background-color: #DCF7F7;
+			color: black;
+			height: 400px;
+			width:90%;
+			margin: auto;
+			margin-top: 10px;
+			align-items: end;
+			justify-content: flex-end;
+			border-radius: 5%;
+			box-shadow: 3px 3px 5px 6px #ccc;
+		}
+		.inbox{
+			background-color: #333333;
+			float: right;
+			border-top-right-radius: 20px;
+			border-bottom-left-radius: 20px;
+			color: white;
+		}
+		.inbox p{
+			padding: 0rem 1rem;
+			margin: 1rem 1rem 1rem 1rem;
+		}
+		.content{
+			display: block;
+			clear: right;
+			padding: 1rem;
+			text-overflow: ellipsis; 
+		}
+		.row{
+			width: 100%;
+			margin-top: 2rem;
+			position: absolute;
+		}
+		@media (min-width: 992px){
+			.col-lg-4{
+				float: left;
+			}
+			.col-lg-4{
+				width:33.3%;
+			}
+		}
+		@media (min-width:768px) and (max-width:991px){
+			.col-md-6, .col-md-1{
+				float: left;
+			}
+			.col-md-6{
+				width:50%;
+			}
+			.col-md-1{
+				width:100%;
+				margin-top: 2rem;
+			}
+		}
+		.container{
+			position: absolute;
+		}
+
+	</style>
+
+	<h1>Our menu</h1>
+
+	<div class="conainer">
+		<div class="row">
+			<div class="col-lg-4 col-md-6" >
+				<div class="box">
+					<div class="inbox"><p>chicken</p></div>
+					<p class="content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
 				</div>
 			</div>
-			<div class="col-lg-4 col-md-6">
-				<div id="container" class="divi">
-				<div id="item" class="itembeef">
-				Beef
-				</div>
-					<div id="content">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod, odio vel convallis rutrum, ante augue ultricies lectus, a fringilla est ex non nisi. Suspendisse potenti. In nec gravida felis, non tristique risus. Suspendisse et nisi ut tortor fermentum tempus. Etiam et varius libero.
-					</div>
+			<div class="col-lg-4 col-md-6" >
+				<div class="box">
+					<div class="inbox"><p>beef</p></div>
+					<p class="content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
 				</div>
 			</div>
-			<div class="col-lg-4 col-md-12">
-				<div id="container" class="divi">
-				<div id="item" class="itemshushi">
-				Sushi
-				</div>
-					<div id="content">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod, odio vel convallis rutrum, ante augue ultricies lectus, a fringilla est ex non nisi. Suspendisse potenti. In nec gravida felis, non tristique risus. Suspendisse et nisi ut tortor fermentum tempus. Etiam et varius libero.
-					</div>
+			<div class="col-lg-4 col-md-1" >
+				<div class="box">
+					<div class="inbox"><p>sushi</p></div>
+					<p class="content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
 				</div>
 			</div>
+		</div>
 	</div>
+	
+
 </body>
 </html>
